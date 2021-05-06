@@ -1,0 +1,161 @@
+<included>
+	<property name="LOG_PATH_N"
+		value="${LOG_PATH:-${LOG_TEMP:-${java.io.tmpdir:-/tmp}}}" />
+		
+	<!-- [公共Appender] 默认 -->
+	<appender name="DEFAULT-APPENDER"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<pattern>${FILE_LOG_PATTERN}</pattern>
+		</encoder>
+		<file>${LOG_PATH_N}/common-default.log</file>
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_PATH_N}/backup/common-default.log.%d{yyyy-MM}.%i.zip
+			</fileNamePattern>
+			<maxFileSize>${LOG_FILE_MAX_SIZE:-10MB}</maxFileSize>
+			<maxHistory>${LOG_FILE_MAX_HISTORY:-0}</maxHistory>
+		</rollingPolicy>
+	</appender>
+	<!-- [公共Appender] 默认 -->
+	<appender name="ERROR-APPENDER"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<pattern>${FILE_LOG_PATTERN}</pattern>
+		</encoder>
+		<file>${LOG_PATH_N}/common-error.log</file>
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_PATH_N}/backup/common-error.log.%d{yyyy-MM}.%i.zip
+			</fileNamePattern>
+			<maxFileSize>${LOG_FILE_MAX_SIZE:-10MB}</maxFileSize>
+			<maxHistory>${LOG_FILE_MAX_HISTORY:-0}</maxHistory>
+		</rollingPolicy>
+		<filter class="ch.qos.logback.classic.filter.ThresholdFilter">
+			<!-- 过滤掉TRACE和DEBUG级别的日志 -->
+			<level>ERROR</level>
+		</filter>
+	</appender>
+
+	<appender name="WEB-DIGEST-APPENDER"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<pattern>${FILE_LOG_PATTERN}</pattern>
+		</encoder>
+		<file>${LOG_PATH_N}/oneboot/web-digest.log</file>
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_PATH_N}/oneboot/backup/web-digest.log.%d{yyyy-MM}.%i.zip
+			</fileNamePattern>
+			<maxFileSize>${LOG_FILE_MAX_SIZE:-10MB}</maxFileSize>
+			<maxHistory>${LOG_FILE_MAX_HISTORY:-0}</maxHistory>
+		</rollingPolicy>
+	</appender>
+
+	<appender name="QUERY-SERVICE-DIGEST-APPENDER"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<pattern>${FILE_LOG_PATTERN}</pattern>
+		</encoder>
+		<file>${LOG_PATH_N}/oneboot/service-digest.log</file>
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_PATH_N}/oneboot/backup/service-digest.log.%d{yyyy-MM}.%i.zip
+			</fileNamePattern>
+			<maxFileSize>${LOG_FILE_MAX_SIZE:-10MB}</maxFileSize>
+			<maxHistory>${LOG_FILE_MAX_HISTORY:-0}</maxHistory>
+		</rollingPolicy>
+	</appender>
+
+	<appender name="DAL-DIGEST-APPENDER"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<pattern>${FILE_LOG_PATTERN}</pattern>
+		</encoder>
+		<file>${LOG_PATH_N}/oneboot/dal-digest.log</file>
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_PATH_N}/oneboot/backup/dal-digest.log.%d{yyyy-MM}.%i.zip
+			</fileNamePattern>
+			<maxFileSize>${LOG_FILE_MAX_SIZE:-10MB}</maxFileSize>
+			<maxHistory>${LOG_FILE_MAX_HISTORY:-0}</maxHistory>
+		</rollingPolicy>
+	</appender>
+
+	<appender name="HTTPCLIENT-DIGEST-APPENDER"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<pattern>${FILE_LOG_PATTERN}</pattern>
+		</encoder>
+		<file>${LOG_PATH_N}/oneboot/httpclient-digest.log</file>
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_PATH_N}/oneboot/backup/httpclient-digest.log.%d{yyyy-MM}.%i.zip
+			</fileNamePattern>
+			<maxFileSize>${LOG_FILE_MAX_SIZE:-10MB}</maxFileSize>
+			<maxHistory>${LOG_FILE_MAX_HISTORY:-0}</maxHistory>
+		</rollingPolicy>
+	</appender>
+	<appender name="QUERY-DAL-DIGEST-APPENDER"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<encoder>
+			<pattern>${FILE_LOG_PATTERN}</pattern>
+		</encoder>
+		<file>${LOG_PATH_N}/oneboot/query-dal-digest.log</file>
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+			<fileNamePattern>${LOG_PATH_N}/oneboot/backup/query-dal-digest.log.%d{yyyy-MM}.%i.zip
+			</fileNamePattern>
+			<maxFileSize>${LOG_FILE_MAX_SIZE:-10MB}</maxFileSize>
+			<maxHistory>${LOG_FILE_MAX_HISTORY:-0}</maxHistory>
+		</rollingPolicy>
+	</appender>
+
+	<logger name="org.springframework.web" level="info" />
+	<logger name="org.springframework.cache" level="info" />
+	<logger name="org.mybatis" level="info" />
+	<logger name="com.huanwu.oneboot.mvc.logging.LoggingFilter" level="error" />
+	<logger name="org.springframework.web.servlet.mvc.method" level="error" />
+	<logger name="io.netty.handler.logging" level="warn" />
+
+	<logger name="httpclient" level="debug" additivity="false">
+		<appender-ref ref="HTTPCLIENT-DIGEST-APPENDER" />
+		<appender-ref ref="ERROR-APPENDER" />
+	</logger>
+
+	<logger name="org.apache.commons.httpclient" level="debug"
+		additivity="false">
+		<appender-ref ref="HTTPCLIENT-DIGEST-APPENDER" />
+		<appender-ref ref="ERROR-APPENDER" />
+	</logger>
+
+	<logger name="WEB-DIGEST" level="info" additivity="true">
+		<appender-ref ref="WEB-DIGEST-APPENDER" />
+		<appender-ref ref="ERROR-APPENDER" />
+	</logger>
+	<logger name="QUERY-DAL-DIGEST" level="info" additivity="true">
+		<appender-ref ref="QUERY-DAL-DIGEST-APPENDER" />
+		<appender-ref ref="ERROR-APPENDER" />
+	</logger>
+	<logger name="QUERY-SERVICE-DIGEST" level="info" additivity="true">
+		<appender-ref ref="QUERY-SERVICE-DIGEST-APPENDER" />
+		<appender-ref ref="ERROR-APPENDER" />
+	</logger>
+	<logger name="SERVICE-DIGEST" level="info" additivity="false">
+		<appender-ref ref="QUERY-SERVICE-DIGEST-APPENDER" />
+		<appender-ref ref="ERROR-APPENDER" />
+	</logger>
+	<logger name="INVOKE-INOUT" level="info" additivity="false">
+		<appender-ref ref="QUERY-SERVICE-DIGEST-APPENDER" />
+		<appender-ref ref="ERROR-APPENDER" />
+	</logger>
+	<logger name="DAL-DIGEST" level="info" additivity="true">
+		<appender-ref ref="DAL-DIGEST-APPENDER" />
+		<appender-ref ref="ERROR-APPENDER" />
+	</logger>
+	
+	<logger name="DEFAULT" level="info" additivity="false">
+		<appender-ref ref="DEFAULT-APPENDER" />
+		<appender-ref ref="ERROR-APPENDER" />
+	</logger>
+</included>
