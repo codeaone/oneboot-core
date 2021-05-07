@@ -6,7 +6,7 @@ import org.oneboot.core.lang.StringUtils;
  * 敏感数据屏蔽工具类
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public class SensitiveDataUtil {
 

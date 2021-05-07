@@ -21,7 +21,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 /**
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public class ToStringUtil {
 	/**

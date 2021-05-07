@@ -18,7 +18,7 @@ import javax.validation.Constraint;
  * 数据格式检查
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 @Target({ METHOD, FIELD, ANNOTATION_TYPE, CONSTRUCTOR, PARAMETER, TYPE_USE })
 @Retention(RetentionPolicy.RUNTIME)

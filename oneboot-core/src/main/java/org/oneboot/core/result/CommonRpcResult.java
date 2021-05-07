@@ -13,7 +13,7 @@ import lombok.experimental.Accessors;
  * 接口返回类务必继承此类，主要是会把错误上下文信息返回到调用系统，更方便去排查问题 当一个业务失败了，通过异常信息来区别异常类型，好做对应的逻辑处理
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 @Getter
 @Setter

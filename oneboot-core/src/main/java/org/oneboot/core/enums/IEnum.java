@@ -20,7 +20,7 @@ package org.oneboot.core.enums;
  * 枚举类父类，所有的枚举都需要实现此接口
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public interface IEnum {
 

@@ -55,7 +55,7 @@ import org.slf4j.LoggerFactory;
  * 将拦截Executor.prepare()方法实现分页方言的插入.
  *
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 @Intercepts({
         @Signature(type = StatementHandler.class, method = "prepare", args = { Connection.class, Integer.class }) })

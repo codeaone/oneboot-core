@@ -30,7 +30,7 @@ import org.springframework.util.CollectionUtils;
  * 本地缓存使用
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public class WarpTheVoCache {
 	/** 读写锁 */

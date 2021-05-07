@@ -19,7 +19,7 @@ package org.oneboot.core.mvc.format;
 /**
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public class SmartDateEditor {
 

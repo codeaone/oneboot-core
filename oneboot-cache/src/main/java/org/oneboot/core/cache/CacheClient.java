@@ -21,7 +21,7 @@ import java.util.List;
 /**
  * 缓存客户端
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public interface CacheClient {
     /**

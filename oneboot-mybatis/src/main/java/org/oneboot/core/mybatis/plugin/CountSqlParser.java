@@ -42,7 +42,7 @@ import net.sf.jsqlparser.statement.select.WithItem;
 /**
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public class CountSqlParser {
     public static final String KEEP_ORDERBY = "/*keep orderby*/";

@@ -30,7 +30,7 @@ import lombok.Setter;
  * Enum转对像
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 @Getter
 @Setter

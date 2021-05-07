@@ -19,7 +19,7 @@
 ///**
 // * @JsonSerialize(using=JacksonDesensitize.class) TODO 可不可以默认过来看下？
 // * @author shiqiao.pro
-// * @see https://boot.codeaone.com
+// * 
 // */
 //@Slf4j
 //public class JacksonDesensitize extends JsonSerializer<String> implements ContextualSerializer {

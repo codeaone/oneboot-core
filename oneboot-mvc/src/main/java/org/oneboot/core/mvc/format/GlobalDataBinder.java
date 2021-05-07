@@ -25,7 +25,7 @@ import org.springframework.web.context.request.WebRequest;
  * 全局类型转换
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public class GlobalDataBinder implements WebBindingInitializer {
 

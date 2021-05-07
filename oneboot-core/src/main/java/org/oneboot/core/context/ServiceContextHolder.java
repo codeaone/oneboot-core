@@ -23,7 +23,7 @@ import org.slf4j.Logger;
  * 线程上下文
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public class ServiceContextHolder {
 

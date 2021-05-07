@@ -23,7 +23,7 @@ import org.oneboot.core.lang.math.Money;
 /**
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public class SmartMoneyEditor extends PropertyEditorSupport {
 

@@ -11,7 +11,7 @@ import java.lang.annotation.Target;
  * 敏感数据字段
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 //@Retention(RetentionPolicy.RUNTIME)
 //@Target({ ElementType.FIELD })

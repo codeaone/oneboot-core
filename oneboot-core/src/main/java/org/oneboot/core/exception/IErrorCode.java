@@ -20,7 +20,7 @@ package org.oneboot.core.exception;
  * 异常代码接口
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public interface IErrorCode {
 

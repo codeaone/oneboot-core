@@ -11,7 +11,7 @@ import lombok.Getter;
  * 通用错误码<br/>
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 @Getter
 @AllArgsConstructor

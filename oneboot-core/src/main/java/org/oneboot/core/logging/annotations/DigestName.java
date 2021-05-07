@@ -26,7 +26,7 @@ import java.lang.annotation.Target;
  * 日志打印时
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 @Target({ ElementType.TYPE, ElementType.METHOD })
 @Retention(RetentionPolicy.RUNTIME)

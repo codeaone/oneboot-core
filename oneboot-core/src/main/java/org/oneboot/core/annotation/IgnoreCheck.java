@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
  * 目前所有的接口都是需要进行会话检查的，打上这个注解就可以跳过会话检查
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)

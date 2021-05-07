@@ -4,7 +4,7 @@ package org.oneboot.core.logging.sensitive;
  * 敏感数据过滤接口
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public interface SensitiveType {
 

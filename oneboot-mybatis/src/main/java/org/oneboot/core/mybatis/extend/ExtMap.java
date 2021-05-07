@@ -23,7 +23,7 @@ import java.lang.annotation.Target;
 /**
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 @Target({ java.lang.annotation.ElementType.METHOD, java.lang.annotation.ElementType.FIELD })
 @Retention(RetentionPolicy.RUNTIME)

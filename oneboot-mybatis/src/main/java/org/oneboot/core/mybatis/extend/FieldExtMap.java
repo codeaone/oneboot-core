@@ -25,7 +25,7 @@ import java.lang.annotation.Target;
 /**
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 @Target({ ElementType.TYPE })
 @Retention(RetentionPolicy.RUNTIME)

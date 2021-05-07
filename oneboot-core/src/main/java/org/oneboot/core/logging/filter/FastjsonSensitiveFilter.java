@@ -15,7 +15,7 @@ import lombok.extern.slf4j.Slf4j;
  * JSONObject.toJSONString(body,new FastjsonDesensitizeFilter()) 这个应该是自动注册才行
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 @Slf4j
 public class FastjsonSensitiveFilter implements ValueFilter {

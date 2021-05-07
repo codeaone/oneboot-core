@@ -28,7 +28,7 @@ import com.fasterxml.jackson.databind.SerializerProvider;
 /**
  * 金额类型JSON序列化
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public class MoneyJsonSerializer extends JsonSerializer<Money> {
     @Override

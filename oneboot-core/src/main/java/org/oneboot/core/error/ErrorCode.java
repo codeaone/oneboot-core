@@ -9,7 +9,7 @@ import lombok.Setter;
  * 标准错误码，方便异常日志系统有效识别问题
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 @Getter
 @Setter

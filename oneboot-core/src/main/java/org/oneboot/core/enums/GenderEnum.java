@@ -22,7 +22,7 @@ import org.apache.commons.lang3.StringUtils;
  * 性别枚举类
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public enum GenderEnum implements IEnum {
 

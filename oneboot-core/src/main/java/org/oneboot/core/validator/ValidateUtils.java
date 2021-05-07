@@ -18,7 +18,7 @@ import org.springframework.util.CollectionUtils;
  * 各类数据格式检查工具集合
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public class ValidateUtils {
 

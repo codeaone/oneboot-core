@@ -11,7 +11,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * 该本地缓存具有时效性，如果超过一定时间没有被使用则被清空，使其系统中不会使用到过期数据
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public final class ExpireLocalMapCache {
 

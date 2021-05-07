@@ -17,7 +17,14 @@
 	<packaging>pom</packaging>
 
 	<name>oneboot-parent</name>
-	<url>https://boot.codeaone.com</url>
+	<url>https://oneboot.org</url>
+
+	<licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
 
 	<properties>
 		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
@@ -44,11 +51,7 @@
 				<artifactId>oneboot-cache</artifactId>
 				<version>0.0.3</version>
 			</dependency>
-			<dependency>
-				<groupId>org.oneboot.core</groupId>
-				<artifactId>oneboot-event</artifactId>
-				<version>0.0.3</version>
-			</dependency>
+			
 			<dependency>
 				<groupId>org.oneboot.core</groupId>
 				<artifactId>oneboot-mybatis</artifactId>
@@ -115,11 +118,20 @@
 		<module>oneboot-core</module>
 		<module>oneboot-mvc</module>
 		<module>oneboot-cache</module>
-		<module>oneboot-event</module>
+		
 		<module>oneboot-mybatis</module>
 	</modules>
 
-
+	<distributionManagement>
+	  <snapshotRepository>
+		<id>ossrh</id>
+		<url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+	  </snapshotRepository>
+	  <repository>
+		<id>ossrh</id>
+		<url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+	  </repository>
+	</distributionManagement>
 
 	<build>
 		<plugins>
@@ -140,7 +152,7 @@
 					<execution>
 						<id>attach-sources</id>
 						<goals>
-							<goal>jar</goal>
+							<goal>jar-no-fork</goal>
 						</goals>
 					</execution>
 				</executions>
@@ -148,6 +160,46 @@
 					<encoding>${project.build.sourceEncoding}</encoding>
 				</configuration>
 			</plugin>
+			<plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-javadoc-plugin</artifactId>
+      <executions>
+        <execution>
+          <id>attach-javadocs</id>
+          <goals>
+            <goal>jar</goal>
+          </goals>
+		   <configuration>
+                <additionalJOption>-Xdoclint:none</additionalJOption>
+            </configuration>
+        </execution>
+      </executions>
+    </plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<version>1.6</version>
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				  <groupId>org.sonatype.plugins</groupId>
+				  <artifactId>nexus-staging-maven-plugin</artifactId>
+				  <version>1.6.7</version>
+				  <extensions>true</extensions>
+				  <configuration>
+					 <serverId>ossrh</serverId>
+					 <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+					 <autoReleaseAfterClose>true</autoReleaseAfterClose>
+				  </configuration>
+				</plugin>
 
 			<plugin>
 				<groupId>net.revelc.code.formatter</groupId>
@@ -169,4 +221,7 @@
 		</plugins>
 
 	</build>
+
+	
+	
 </project>

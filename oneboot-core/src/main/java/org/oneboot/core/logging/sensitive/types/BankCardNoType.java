@@ -6,7 +6,7 @@ import org.oneboot.core.logging.sensitive.SensitiveDataUtil;
  * 银行卡
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public class BankCardNoType extends AbstractType {
 

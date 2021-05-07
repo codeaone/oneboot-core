@@ -4,7 +4,7 @@ package org.oneboot.core.cache.session;
  * 分布式会话客户端
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public interface SessionClient {
 

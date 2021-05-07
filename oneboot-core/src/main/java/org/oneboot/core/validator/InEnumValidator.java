@@ -13,7 +13,7 @@ import org.oneboot.core.utils.EnumsUtil;
  * 自定义约束的校验器
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public class InEnumValidator implements ConstraintValidator<InEnum, String> {
 

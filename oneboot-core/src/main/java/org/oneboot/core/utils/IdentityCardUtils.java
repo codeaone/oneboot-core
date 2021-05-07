@@ -15,7 +15,7 @@ import org.slf4j.LoggerFactory;
  * 身份证工具类
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public class IdentityCardUtils {
 	/** 身份证号的第0位 */

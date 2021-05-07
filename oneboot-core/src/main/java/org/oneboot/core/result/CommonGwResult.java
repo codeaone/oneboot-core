@@ -26,7 +26,7 @@ import lombok.experimental.Accessors;
  * CommonGwResult 为 Result 的构造方法增加默认的初始化 针对网关的返回基类
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 @Getter
 @Setter

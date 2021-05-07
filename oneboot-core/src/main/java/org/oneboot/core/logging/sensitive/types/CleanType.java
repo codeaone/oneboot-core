@@ -4,7 +4,7 @@ package org.oneboot.core.logging.sensitive.types;
  * 什么都不输出
  *
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public class CleanType extends AbstractType {
 

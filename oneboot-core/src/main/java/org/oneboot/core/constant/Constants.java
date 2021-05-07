@@ -4,7 +4,7 @@ package org.oneboot.core.constant;
  * 通用常量信息
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public class Constants {
 	/**

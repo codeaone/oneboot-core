@@ -21,7 +21,7 @@ import lombok.Setter;
  * 标准错误对象是一次错误处理结果的描述。
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 @Getter
 @Setter
@@ -47,13 +47,6 @@ public class CommonError implements Serializable {
 		return errorCode + "@" + location + ":" + errorMsg;
 	}
 
-	/**
-	 * 构造方法
-	 * 
-	 * @param errorCode
-	 * @param errorMsg
-	 * @param location
-	 */
 	public CommonError(ErrorCode errorCode, String errorMsg, String location) {
 		super();
 		this.errorCode = errorCode;

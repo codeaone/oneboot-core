@@ -26,7 +26,7 @@ import org.oneboot.core.logging.ToString;
 /**
  * @param <T>
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public class ExcelObject<T extends Object> extends ToString {
 

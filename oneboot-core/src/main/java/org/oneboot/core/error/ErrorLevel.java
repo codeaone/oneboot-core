@@ -20,7 +20,7 @@ package org.oneboot.core.error;
  * 错误级别常量，主要用来做日志分析与打印
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public interface ErrorLevel {
 

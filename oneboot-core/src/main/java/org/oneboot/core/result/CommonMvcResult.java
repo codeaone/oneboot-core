@@ -10,7 +10,7 @@ import lombok.experimental.Accessors;
  * 针对web mvc 端的返回对像
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 @Getter
 @Setter

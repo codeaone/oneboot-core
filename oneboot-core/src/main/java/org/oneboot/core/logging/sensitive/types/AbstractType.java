@@ -6,7 +6,7 @@ import org.oneboot.core.logging.sensitive.SensitiveType;
  * 屏蔽实现的抽象类，提供公共方法，并且将实现类与外部隔离
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public abstract class AbstractType implements SensitiveType {
 	/**

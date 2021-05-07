@@ -25,7 +25,7 @@ import org.oneboot.core.enums.EnumObject;
  * 本地缓存实现服务
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public interface WarpTheVoService {
 

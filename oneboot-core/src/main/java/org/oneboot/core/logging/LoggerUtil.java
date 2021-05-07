@@ -25,7 +25,7 @@ import org.slf4j.helpers.MessageFormatter;
  * 方便logger实现的小工具.
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public class LoggerUtil {
 

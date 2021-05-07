@@ -23,7 +23,7 @@ import org.springframework.validation.Validator;
 /**
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 @Component
 public class MultiFileValidator implements Validator {

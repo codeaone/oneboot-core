@@ -11,7 +11,7 @@ import java.lang.annotation.Target;
  * RPC接口调用配置
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 @Target({ ElementType.METHOD, ElementType.TYPE })
 @Retention(RetentionPolicy.RUNTIME)

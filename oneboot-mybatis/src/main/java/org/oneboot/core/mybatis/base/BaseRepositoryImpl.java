@@ -55,7 +55,7 @@ import lombok.extern.slf4j.Slf4j;
  * @param <D>
  *            泛型：M 是 mapper 对象
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 @Slf4j
 public abstract class BaseRepositoryImpl<M extends BaseModel, D> extends AbstractRepositoryImpl

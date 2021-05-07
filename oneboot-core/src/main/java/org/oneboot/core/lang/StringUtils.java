@@ -9,7 +9,7 @@ import org.oneboot.core.lang.text.StrFormatter;
  * 对StringUtils做一层浅浅的封装，方便保持代码风格上的统一
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public class StringUtils extends org.apache.commons.lang3.StringUtils {
 

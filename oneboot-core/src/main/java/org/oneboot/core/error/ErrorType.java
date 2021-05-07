@@ -20,7 +20,7 @@ package org.oneboot.core.error;
  * 错误类型常量
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public interface ErrorType {
 

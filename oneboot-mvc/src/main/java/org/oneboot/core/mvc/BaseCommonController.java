@@ -68,7 +68,7 @@ import lombok.extern.slf4j.Slf4j;
  * @param <F>
  * @param <V>
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 @Slf4j
 public abstract class BaseCommonController<M extends BaseModel, F extends BaseForm, V extends BaseVO>

@@ -29,7 +29,7 @@ import org.oneboot.core.lang.math.Money;
 /**
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 @MappedTypes({ Money.class })
 public class MoneyTypeHandler extends BaseTypeHandler<Money> {

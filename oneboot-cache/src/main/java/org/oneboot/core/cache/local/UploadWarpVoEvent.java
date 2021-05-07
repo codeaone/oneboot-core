@@ -21,7 +21,7 @@ import org.springframework.context.ApplicationEvent;
 /**
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public class UploadWarpVoEvent extends ApplicationEvent {
 

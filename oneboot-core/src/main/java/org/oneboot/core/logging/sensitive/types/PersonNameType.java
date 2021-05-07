@@ -6,7 +6,7 @@ import org.oneboot.core.logging.sensitive.SensitiveDataUtil;
  * 个人名字
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public class PersonNameType extends AbstractType {
 

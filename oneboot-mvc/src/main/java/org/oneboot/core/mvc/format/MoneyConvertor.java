@@ -23,7 +23,7 @@ import org.springframework.core.convert.converter.Converter;
  * 金额与字符串类型进行转换
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public class MoneyConvertor implements Converter<String, Money> {
 

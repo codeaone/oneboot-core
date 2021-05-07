@@ -14,7 +14,7 @@ import org.springframework.util.ObjectUtils;
  * 常用断言工具类
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public abstract class Assert {
 

@@ -29,7 +29,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 /**
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public abstract class AbstractRepositoryImpl extends BaseServiceRepositoryImpl {
 	protected <T> Page<T> copyToPage(List<? extends Object> source, Class<T> target, BaseTotalSearcher context) {

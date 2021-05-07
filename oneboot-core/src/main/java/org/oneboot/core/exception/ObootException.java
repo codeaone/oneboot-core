@@ -12,7 +12,7 @@ import lombok.Setter;
  * OneBoot 统一异常
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 @Setter
 @Getter

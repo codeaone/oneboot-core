@@ -29,7 +29,7 @@ import java.lang.annotation.Target;
  * </pre>
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)

@@ -4,7 +4,7 @@ package org.oneboot.core.mvc.file;
  * 媒体类型工具类
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public class MimeTypeUtils {
 	public static final String IMAGE_PNG = "image/png";

@@ -4,7 +4,7 @@ package org.oneboot.core.validator;
  * 参数检查
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public interface ParamValidate {
 

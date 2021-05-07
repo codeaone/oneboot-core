@@ -22,7 +22,7 @@ import org.oneboot.core.validator.types.MobileCheckType;
  * 数据格式检查器
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public enum DataCheckEnum {
 

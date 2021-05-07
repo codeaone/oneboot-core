@@ -31,7 +31,7 @@ import com.google.common.base.CaseFormat;
  * 当结果数据量很大时，我们不需要查询出记录总条数
  *
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public class BaseSearcher extends ToString {
 	/**  */

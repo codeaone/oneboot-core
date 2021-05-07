@@ -19,7 +19,7 @@ package org.oneboot.core.cache;
 /**
  * 通用缓存常量
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public interface CacheConstant {
 	

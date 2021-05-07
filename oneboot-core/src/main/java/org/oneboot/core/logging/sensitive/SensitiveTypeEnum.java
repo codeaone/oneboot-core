@@ -12,7 +12,7 @@ import org.oneboot.core.logging.sensitive.types.PersonNameType;
  * 敏感数据屏蔽类型枚举
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public enum SensitiveTypeEnum {
 

@@ -39,7 +39,7 @@ import org.springframework.web.multipart.MultipartFile;
  * 通用文件上传
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public class CommonFileUpload extends ObootBaseController {
 

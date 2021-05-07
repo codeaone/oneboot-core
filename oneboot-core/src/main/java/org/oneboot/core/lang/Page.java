@@ -25,7 +25,7 @@ import java.util.List;
  * 
  * @param <T>
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public class Page<T> implements Serializable {
 

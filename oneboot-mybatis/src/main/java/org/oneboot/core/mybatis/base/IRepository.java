@@ -33,7 +33,7 @@ import com.baomidou.mybatisplus.core.conditions.Wrapper;
  * @param <D>
  *            DO对像
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public interface IRepository<T extends BaseModel, D> {
 

@@ -29,7 +29,7 @@ import org.oneboot.core.enums.IEnum;
  * 枚举工具类
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public class EnumsUtil {
 

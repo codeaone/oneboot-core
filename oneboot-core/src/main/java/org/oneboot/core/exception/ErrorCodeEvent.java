@@ -25,7 +25,7 @@ import lombok.Setter;
  * 系统出现异常时，会发出此事件，用来上报异常行为
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 @Getter
 @Setter

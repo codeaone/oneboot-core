@@ -20,7 +20,7 @@ package org.oneboot.core.mybatis.model;
  * 当结果数据量不大时，我们需要查询出记录总条数
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public class BaseTotalSearcher extends BaseSearcher {
 

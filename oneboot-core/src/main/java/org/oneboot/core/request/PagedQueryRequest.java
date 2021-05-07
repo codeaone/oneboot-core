@@ -31,7 +31,7 @@ import lombok.experimental.Accessors;
  * 分页查询请求
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 @Setter
 @Getter

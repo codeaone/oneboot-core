@@ -6,7 +6,7 @@ import org.oneboot.core.logging.sensitive.SensitiveDataUtil;
  * 居民身份证号码
  * 
  * @author shiqiao.pro
- * @see https://boot.codeaone.com
+ * 
  */
 public class IdCardNoType extends AbstractType {
 
