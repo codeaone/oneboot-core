@@ -6,11 +6,10 @@
 	<parent>
 		<groupId>org.oneboot.core</groupId>
 		<artifactId>oneboot-parent</artifactId>
-		<version>0.0.3</version>
+		<version>0.0.4</version>
 	</parent>
 
 	<artifactId>oneboot-mvc</artifactId>
-	<version>0.0.3</version>
 	<name>oneboot-mvc</name>
 	<url>https://boot.codeaone.com</url>
 

@@ -7,11 +7,10 @@
 	<parent>
 		<groupId>org.oneboot.core</groupId>
 		<artifactId>oneboot-parent</artifactId>
-		<version>0.0.3</version>
+		<version>0.0.4</version>
 	</parent>
 	
 	<artifactId>oneboot-mybatis</artifactId>
-	<version>0.0.3</version>
 	<name>oneboot-mybatis</name>
 	<url>https://boot.codeaone.com</url>
 	
