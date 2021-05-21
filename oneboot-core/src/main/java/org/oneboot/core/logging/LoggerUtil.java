@@ -63,7 +63,7 @@ public class LoggerUtil {
      * @param logger
      *            日志记录器
      * @param message
-     *            log信息,如:<code>xxx{0},xxx{1}...</code>
+     *            log信息,如:<code>xxx{},xxx{}...</code>
      * @param params
      *            log格式化参数,数组length与message参数化个数相同, 如:<code>Object[]  object=new Object[]{"xxx","xxx"}</code>
      */
@@ -75,7 +75,7 @@ public class LoggerUtil {
 
     public static void info(Logger logger, String message) {
         if (logger.isInfoEnabled()) {
-            logger.info(format("{0}", message));
+            logger.info(format("{}", message));
         }
     }
 
@@ -85,7 +85,7 @@ public class LoggerUtil {
      * @param logger
      *            日志记录器
      * @param message
-     *            log信息,如:<code>xxx{0},xxx{1}...</code>
+     *            log信息,如:<code>xxx{},xxx{}...</code>
      * @param params
      *            log格式化参数,数组length与message参数化个数相同, 如:<code>Object[]  object=new Object[]{"xxx","xxx"}</code>
      */
@@ -102,7 +102,7 @@ public class LoggerUtil {
      * @param logger
      *            日志记录器
      * @param message
-     *            log信息,如:<code>xxx{0},xxx{1}...</code>
+     *            log信息,如:<code>xxx{},xxx{}...</code>
      * @param params
      *            log格式化参数,数组length与message参数化个数相同, 如:<code>Object[]  object=new Object[]{"xxx","xxx"}</code>
      */
@@ -120,7 +120,7 @@ public class LoggerUtil {
      * @param logger
      *            日志记录器
      * @param message
-     *            log信息,如:<code>xxx{0},xxx{1}...</code>
+     *            log信息,如:<code>xxx{},xxx{}...</code>
      * @param params
      *            log格式化参数,数组length与message参数化个数相同, 如:<code>Object[]  object=new Object[]{"xxx","xxx"}</code>
      */
@@ -136,7 +136,7 @@ public class LoggerUtil {
      * @param logger
      *            日志记录器
      * @param message
-     *            log信息,如:<code>xxx{0},xxx{1}...</code>
+     *            log信息,如:<code>xxx{},xxx{}...</code>
      * @param params
      *            log格式化参数,数组length与message参数化个数相同, 如:<code>Object[]  object=new Object[]{"xxx","xxx"}</code>
      */
@@ -155,7 +155,7 @@ public class LoggerUtil {
      * @param logger
      *            日志记录器
      * @param message
-     *            log信息,如:<code>xxx{0},xxx{1}...</code>
+     *            log信息,如:<code>xxx{},xxx{}...</code>
      * @param params
      *            log格式化参数,数组length与message参数化个数相同, 如:<code>Object[]  object=new Object[]{"xxx","xxx"}</code>
      */
@@ -172,7 +172,7 @@ public class LoggerUtil {
      * @param logger
      *            日志记录器
      * @param message
-     *            log信息,如:<code>xxx{0},xxx{1}...</code>
+     *            log信息,如:<code>xxx{},xxx{}...</code>
      * @param params
      *            log格式化参数,数组length与message参数化个数相同, 如:<code>Object[]  object=new Object[]{"xxx","xxx"}</code>
      */
@@ -190,7 +190,7 @@ public class LoggerUtil {
      * @param logger
      *            日志记录器
      * @param message
-     *            log信息,如:<code>xxx{0},xxx{1}...</code>
+     *            log信息,如:<code>xxx{},xxx{}...</code>
      * @param params
      *            log格式化参数,数组length与message参数化个数相同, 如:<code>Object[]  object=new Object[]{"xxx","xxx"}</code>
      */
@@ -206,7 +206,7 @@ public class LoggerUtil {
      * @param logger
      *            日志记录器
      * @param message
-     *            log信息,如:<code>xxx{0},xxx{1}...</code>
+     *            log信息,如:<code>xxx{},xxx{}...</code>
      * @param params
      *            log格式化参数,数组length与message参数化个数相同, 如:<code>Object[]  object=new Object[]{"xxx","xxx"}</code>
      */
@@ -225,7 +225,7 @@ public class LoggerUtil {
      * @param logger
      *            日志记录器
      * @param message
-     *            log信息,如:<code>xxx{0},xxx{1}...</code>
+     *            log信息,如:<code>xxx{},xxx{}...</code>
      * @param params
      *            log格式化参数,数组length与message参数化个数相同, 如:<code>Object[]  object=new Object[]{"xxx","xxx"}</code>
      */
@@ -242,7 +242,7 @@ public class LoggerUtil {
      * @param logger
      *            日志记录器
      * @param message
-     *            log信息,如:<code>xxx{0},xxx{1}...</code>
+     *            log信息,如:<code>xxx{},xxx{}...</code>
      * @param params
      *            log格式化参数,数组length与message参数化个数相同, 如:<code>Object[]  object=new Object[]{"xxx","xxx"}</code>
      */
@@ -260,7 +260,7 @@ public class LoggerUtil {
      * @param logger
      *            日志记录器
      * @param message
-     *            log信息,如:<code>xxx{0},xxx{1}...</code>
+     *            log信息,如:<code>xxx{},xxx{}...</code>
      * @param params
      *            log格式化参数,数组length与message参数化个数相同, 如:<code>Object[]  object=new Object[]{"xxx","xxx"}</code>
      */
@@ -276,7 +276,7 @@ public class LoggerUtil {
      * @param logger
      *            日志记录器
      * @param message
-     *            log信息,如:<code>xxx{0},xxx{1}...</code>
+     *            log信息,如:<code>xxx{},xxx{}...</code>
      * @param params
      *            log格式化参数,数组length与message参数化个数相同, 如:<code>Object[]  object=new Object[]{"xxx","xxx"}</code>
      */
@@ -295,7 +295,7 @@ public class LoggerUtil {
      * @param logger
      *            日志记录器
      * @param message
-     *            log信息,如:<code>xxx{0},xxx{1}...</code>
+     *            log信息,如:<code>xxx{},xxx{}...</code>
      * @param params
      *            log格式化参数,数组length与message参数化个数相同, 如:<code>Object[]  object=new Object[]{"xxx","xxx"}</code>
      */
@@ -310,7 +310,7 @@ public class LoggerUtil {
      * 日志信息参数化格式化
      * 
      * @param message
-     *            log信息,如:<code>xxx{0},xxx{1}...</code>
+     *            log信息,如:<code>xxx{},xxx{}...</code>
      * @param params
      *            log格式化参数,数组length与message参数化个数相同, 如:<code>Object[]  object=new Object[]{"xxx","xxx"}</code>
      * @return 格式化后的日志信息

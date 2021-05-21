@@ -88,17 +88,17 @@ public class CommonOperateTemplateImpl implements CommonOperateTemplate {
                 // Profiler.enter("执行模板业务-after");
                 callback.after(result);
             } catch (Exception e) {
-                LoggerUtil.warn(e, "事务后处理失败，result={1}", log, result);
+                LoggerUtil.warn(e, "事务后处理失败，result={}", log, result);
             } finally {
                 // Profiler.release();
             }
 
             // 4. 组装结果
             ResultUtil.buildSuccessCommonResult(result, sceneCode);
-            LoggerUtil.info("{0}成功！详细信息：result={1}", log, result);
+            LoggerUtil.info("{}成功！详细信息：result={}", log, result);
             successStr = "成功";
         } /*
-           * catch (IdempotentException e) { LoggerUtil.warn(e, "{0}幂等控制，result={1}", log, result);
+           * catch (IdempotentException e) { LoggerUtil.warn(e, "{}幂等控制，result={}", log, result);
            * ResultUtil.buildSuccessCommonResult(result, sceneCode); }
            */catch (ServiceRpcException e) {
 
@@ -109,11 +109,11 @@ public class CommonOperateTemplateImpl implements CommonOperateTemplate {
             // 这里需要看是系统异常还是业务异常
             String errorLevel = errorCode.getErrorLevel();
             if (StringUtils.equals(ErrorLevel.ERROR, errorLevel)) {
-                LoggerUtil.error(e, "{0}服务调用失败，result={1}", log, result);
+                LoggerUtil.error(e, "{}服务调用失败，result={}", log, result);
             } else {
                 // 不输出堆栈信息
-                LoggerUtil.warn("{0}服务调用失败，result={1}", log, result);
-                LoggerUtil.warn(GW_BIZ_WARN, "{0}服务调用失败，result={1}", log, result);
+                LoggerUtil.warn("{}服务调用失败，result={}", log, result);
+                LoggerUtil.warn(GW_BIZ_WARN, "{}服务调用失败，result={}", log, result);
             }
             applicationContext.publishEvent(event);
 
@@ -128,11 +128,11 @@ public class CommonOperateTemplateImpl implements CommonOperateTemplate {
             // 这里需要看是系统异常还是业务异常
             String errorLevel = errorCode.getErrorLevel();
             if (StringUtils.equals(ErrorLevel.ERROR, errorLevel)) {
-                LoggerUtil.error(e, "{0}失败，result={1}", log, result);
+                LoggerUtil.error(e, "{}失败，result={}", log, result);
             } else {
                 // 不输出堆栈信息
-                LoggerUtil.warn("{0}失败，result={1}, error={2}", log, result, e.getMessage());
-                LoggerUtil.warn(GW_BIZ_WARN, "{0}失败biz，result={1}, error={2}", log, result, e.getMessage());
+                LoggerUtil.warn("{}失败，result={}, error={}", log, result, e.getMessage());
+                LoggerUtil.warn(GW_BIZ_WARN, "{}失败biz，result={}, error={}", log, result, e.getMessage());
             }
             applicationContext.publishEvent(event);
 
@@ -141,7 +141,7 @@ public class CommonOperateTemplateImpl implements CommonOperateTemplate {
             event.setError(e);
             event.setErrorCode(CommonErrorCode.SYSTEM_ERROR);
             applicationContext.publishEvent(event);
-            LoggerUtil.error(e, "{0}异常，result={1}", log, result);
+            LoggerUtil.error(e, "{}异常，result={}", log, result);
             // ResultUtil.buildEventRetryResult(result, sceneCode);
         } finally {
 
@@ -149,7 +149,7 @@ public class CommonOperateTemplateImpl implements CommonOperateTemplate {
                 successStr = "失败";
             }
             long time = System.currentTimeMillis() - start;
-            LoggerUtil.info("执行【{0}】" + successStr + ",耗时:{1}ms.", bizName, time);
+            LoggerUtil.info("执行【{}】" + successStr + ",耗时:{}ms.", bizName, time);
 
             ServiceContextHolder.clean();
             // Profiler.release();
@@ -211,17 +211,17 @@ public class CommonOperateTemplateImpl implements CommonOperateTemplate {
                 // Profiler.enter("执行模板业务-after");
                 callback.after(result);
             } catch (Exception e) {
-                LoggerUtil.warn(e, "事务后处理失败，result={1}", log, result);
+                LoggerUtil.warn(e, "事务后处理失败，result={}", log, result);
             } finally {
                 // Profiler.release();
             }
 
             // 4. 组装结果
             ResultUtil.buildSuccessCommonGwResult(result, sceneCode);
-            LoggerUtil.info("{0}成功！详细信息：result={1}", log, result);
+            LoggerUtil.info("{}成功！详细信息：result={}", log, result);
             successStr = "成功";
         } /*
-           * catch (IdempotentException e) { LoggerUtil.warn(e, "{0}幂等控制，result={1}", log, result);
+           * catch (IdempotentException e) { LoggerUtil.warn(e, "{}幂等控制，result={}", log, result);
            * ResultUtil.buildSuccessCommonResult(result, sceneCode); }
            */catch (ServiceRpcException e) {
             ErrorCodeEvent event = new ErrorCodeEvent();
@@ -231,10 +231,10 @@ public class CommonOperateTemplateImpl implements CommonOperateTemplate {
             // 这里需要看是系统异常还是业务异常
             String errorLevel = errorCode.getErrorLevel();
             if (StringUtils.equals(ErrorLevel.ERROR, errorLevel)) {
-                LoggerUtil.error(e, "{0}服务调用失败，result={1}", log, result);
+                LoggerUtil.error(e, "{}服务调用失败，result={}", log, result);
             } else {
                 // 不输出堆栈信息
-                LoggerUtil.error("{0}服务调用失败，result={1}, error={2}", log, result, e.getMessage());
+                LoggerUtil.error("{}服务调用失败，result={}, error={}", log, result, e.getMessage());
             }
             applicationContext.publishEvent(event);
 
@@ -252,14 +252,14 @@ public class CommonOperateTemplateImpl implements CommonOperateTemplate {
             ResultUtil.buildFailCommonGwResult(result, sceneCode, e);
 
             if (StringUtils.equals(ErrorLevel.ERROR, errorLevel)) {
-                LoggerUtil.error(e, "{0}失败，result={1}", log, result);
+                LoggerUtil.error(e, "{}失败，result={}", log, result);
             } else {
                 // 不输出堆栈信息
-                LoggerUtil.warn("{0}失败，result={1}, error={2}", log, result, e.getMessage());
-                LoggerUtil.warn(GW_BIZ_WARN, "{0}失败biz，result={1}, error={2}", log, result, e.getMessage());
+                LoggerUtil.warn("{}失败，result={}, error={}", log, result, e.getMessage());
+                LoggerUtil.warn(GW_BIZ_WARN, "{}失败biz，result={}, error={}", log, result, e.getMessage());
             }
         } catch (Throwable e) {
-            LoggerUtil.error(e, "{0}异常，result={1}", log, result);
+            LoggerUtil.error(e, "{}异常，result={}", log, result);
             ErrorCodeEvent event = new ErrorCodeEvent();
             event.setError(e);
             event.setErrorCode(CommonErrorCode.SYSTEM_ERROR);
@@ -272,7 +272,7 @@ public class CommonOperateTemplateImpl implements CommonOperateTemplate {
                 successStr = "失败";
             }
             long time = System.currentTimeMillis() - start;
-            LoggerUtil.info("执行【{0}】" + successStr + ",耗时:{1}ms.", bizName, time);
+            LoggerUtil.info("执行【{}】" + successStr + ",耗时:{}ms.", bizName, time);
 
             ServiceContextHolder.clean();
             // Profiler.release();

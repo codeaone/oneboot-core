@@ -38,15 +38,15 @@ public abstract class AbstractCacheManager implements CacheManager {
     @Override
     public boolean initCache() {
         String cacheNameDesc = getCacheName().getDesc();
-        LoggerUtil.info("开始初始化{0}", cacheNameDesc);
+        LoggerUtil.info("开始初始化{}", cacheNameDesc);
         try {
             loadingCache();
             return true;
         } catch (Exception e) {
-            LoggerUtil.error(e, "初始化{0}出现异常", cacheNameDesc);
+            LoggerUtil.error(e, "初始化{}出现异常", cacheNameDesc);
             return false;
         } finally {
-            LoggerUtil.info("{0}初始化结束", cacheNameDesc);
+            LoggerUtil.info("{}初始化结束", cacheNameDesc);
         }
     }
 
@@ -55,16 +55,16 @@ public abstract class AbstractCacheManager implements CacheManager {
     @Override
     public boolean refreshCache() {
         String cacheNameDesc = getCacheName().getDesc();
-        LoggerUtil.info(logger, "开始刷新{0}", cacheNameDesc);
+        LoggerUtil.info(logger, "开始刷新{}", cacheNameDesc);
         try {
             loadingCache();
             afterRefresh();
             return true;
         } catch (Exception e) {
-            LoggerUtil.error(e, "刷新{0}出现异常", cacheNameDesc);
+            LoggerUtil.error(e, "刷新{}出现异常", cacheNameDesc);
             return false;
         } finally {
-            LoggerUtil.info(logger, "{0}刷新结束", cacheNameDesc);
+            LoggerUtil.info(logger, "{}刷新结束", cacheNameDesc);
         }
     }
 
@@ -81,8 +81,8 @@ public abstract class AbstractCacheManager implements CacheManager {
     @Override
     public void dump() {
         String cacheNameDesc = getCacheName().getDesc();
-        LoggerUtil.info(logger, "========开始打印{0}========\n{1}", cacheNameDesc, getCacheInfo());
-        LoggerUtil.info(logger, "========打印{0}结束========", cacheNameDesc);
+        LoggerUtil.info(logger, "========开始打印{}========\n{}", cacheNameDesc, getCacheInfo());
+        LoggerUtil.info(logger, "========打印{}结束========", cacheNameDesc);
     }
 
     /** 
@@ -90,9 +90,9 @@ public abstract class AbstractCacheManager implements CacheManager {
     @Override
     public void dump(String channelSystem) {
         String cacheNameDesc = getCacheName().getDesc();
-        LoggerUtil.info(logger, "========开始打印渠道{0}缓存{1}========\n{2}", channelSystem, cacheNameDesc,
+        LoggerUtil.info(logger, "========开始打印渠道{}缓存{}========\n{}", channelSystem, cacheNameDesc,
                 getCacheInfo(channelSystem));
-        LoggerUtil.info(logger, "========打印渠道{0}缓存{1}结束========", channelSystem, cacheNameDesc);
+        LoggerUtil.info(logger, "========打印渠道{}缓存{}结束========", channelSystem, cacheNameDesc);
     }
 
     /**

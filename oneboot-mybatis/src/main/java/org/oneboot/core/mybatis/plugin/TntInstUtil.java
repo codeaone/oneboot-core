@@ -53,14 +53,14 @@ public class TntInstUtil {
             // 从上下文中获取
             /*
              * try { EventContext context = EventContextUtil.getEventContextFromTracer(); tntInstId =
-             * context.getTntInstId(); } catch (Exception e) { //LoggerUtil.error(e, "租户信息从上下文中获取失败，设置默认值：${0}",
+             * context.getTntInstId(); } catch (Exception e) { //LoggerUtil.error(e, "租户信息从上下文中获取失败，设置默认值：${}",
              * tntInstId); }
              */
 
             // 获取到空的租户信息或获取失败，返回默认
             if (StringUtils.isBlank(tntInstId)) {
                 tntInstId = "SMARTDEF";
-                // LoggerUtil.error("租户信息从上下文中获取为空，设置默认值：${0}", tntInstId);
+                // LoggerUtil.error("租户信息从上下文中获取为空，设置默认值：${}", tntInstId);
             }
 
             // 返回

@@ -249,7 +249,7 @@ public abstract class BaseCommonController<M extends BaseModel, F extends BaseFo
 			importCheck(obj);
 		}
 		repository.saveBatch(list);
-		LoggerUtil.warn("批量上传总耗时：{0}ms, 总条数:{1}", System.currentTimeMillis() - start, list.size());
+		LoggerUtil.warn("批量上传总耗时：{}ms, 总条数:{}", System.currentTimeMillis() - start, list.size());
 		CommonMvcResult<Object> map = getSucceed();
 		return map;
 	}
@@ -321,11 +321,11 @@ public abstract class BaseCommonController<M extends BaseModel, F extends BaseFo
 		try {
 			data = ExcelUtil.readExcel(fileSavePath);
 		} catch (FileNotFoundException e) {
-			LoggerUtil.warn("导入excel文件解析失败fileName={0},err={1}", fileToken, e.getMessage());
+			LoggerUtil.warn("导入excel文件解析失败fileName={},err={}", fileToken, e.getMessage());
 			throw new ObootException(CommonErrorCode.UNKNOWN_ERROR, "文件读取失败");
 		}
 
-		LoggerUtil.warn("读取上传文件耗时：{0}", System.currentTimeMillis() - start);
+		LoggerUtil.warn("读取上传文件耗时：{}", System.currentTimeMillis() - start);
 		convertExceData(data, list);
 		return list;
 	}
@@ -392,7 +392,7 @@ public abstract class BaseCommonController<M extends BaseModel, F extends BaseFo
 		// 增加日期格式，注意目前只支持一种格式
 		XlsxExcelView view = new XlsxExcelView();
 		view.setDateFormat(new SimpleDateFormat("yyyy-MM-dd"));
-		LoggerUtil.info("本次导出 {0} 条记录", eo.getDatas().size());
+		LoggerUtil.info("本次导出 {} 条记录", eo.getDatas().size());
 		ModelAndView mv = new ModelAndView(view, dataMap);
 		return mv;
 	}
@@ -428,7 +428,7 @@ public abstract class BaseCommonController<M extends BaseModel, F extends BaseFo
 		// 得到总页数据，然后for查询
 		// 分页查询数据
 		Page<V> pageList = getSearchData(form);
-		LoggerUtil.info("查询总数：{0}", pageList.getTotalCount());
+		LoggerUtil.info("查询总数：{}", pageList.getTotalCount());
 
 		list.addAll(pageList.getResult());
 		int totalPageSize = pageList.getTotalPageSize();

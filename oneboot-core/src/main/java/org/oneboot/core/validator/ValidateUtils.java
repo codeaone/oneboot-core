@@ -26,13 +26,13 @@ public class ValidateUtils {
 	public final static String EMAIL_REG = "^([a-zA-Z0-9_\\.\\-\\+])+\\@(([a-zA-Z0-9\\-])+\\.)+([a-zA-Z0-9]{2,20})$";
 
 	/** 大陆身份证的正则表达式 */
-	public final static String ID_CARD_NUMBER_REG = "^((([0-9]){15})|(([0-9]){17}[0-9Xx]{1}))$";
+	public final static String ID_CARD_NUMBER_REG = "^((([0-9]){15})|(([0-9]){17}[0-9Xx]{}))$";
 
 	/** 18位身份证最后的附加位 */
 	public final static String OVERHEAD_BIT = "X";
 
 	/** 正则表达式:验证IP地址 */
-	public static final String REGEX_IP_ADDR = "(2[5][0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\.(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\.(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})\\.(25[0-5]|2[0-4]\\d|1\\d{2}|\\d{1,2})";
+	public static final String REGEX_IP_ADDR = "(2[5][0-5]|2[0-4]\\d|1\\d{}|\\d{1,2})\\.(25[0-5]|2[0-4]\\d|1\\d{}|\\d{1,2})\\.(25[0-5]|2[0-4]\\d|1\\d{}|\\d{1,2})\\.(25[0-5]|2[0-4]\\d|1\\d{}|\\d{1,2})";
 
 	/** 客户姓名的正则表达式 */
 	private static final String CUST_NAME_REGEX = "^([\u4e00-\u9fa5]+|[a-zA-Z]+)((·|\\s)?([\u4e00-\u9fa5]+|[a-zA-Z]+))*";
@@ -41,12 +41,12 @@ public class ValidateUtils {
 	private static final String ORG_CODE_REGEX = "^([0-9A-Z]){8}-[0-9|X]$";
 
 	/** 年月正则表达式 */
-	private static final String YEAR_MONTH_REGEX = "^(?:19|20\\d{2})(?:0[1-9]|1[0-2])";
+	private static final String YEAR_MONTH_REGEX = "^(?:19|20\\d{})(?:0[1-9]|1[0-2])";
 
 	/** 经度正则表达式 */
-	private static final String LONGITUDE_REGEX = "^[\\-\\+]?(0?\\d{1,2}\\.\\d{1,5}|1[0-7]?\\d{1}\\.\\d{1,5}|180\\.0{1,5})$";
+	private static final String LONGITUDE_REGEX = "^[\\-\\+]?(0?\\d{1,2}\\.\\d{1,5}|1[0-7]?\\d{}\\.\\d{1,5}|180\\.0{1,5})$";
 	/** 纬度正则表达式 */
-	private static final String LATITUDE_REGEX = "^[\\-\\+]?([0-8]?\\d{1}\\.\\d{1,5}|90\\.0{1,5})$";
+	private static final String LATITUDE_REGEX = "^[\\-\\+]?([0-8]?\\d{}\\.\\d{1,5}|90\\.0{1,5})$";
 
 	/** 身份证地址正则表达式 */
 	private static final String ADDRESS_REGEX = "^[0-9a-zA-Z-()\\s（）\\._\u4e00-\u9fa5]+$";

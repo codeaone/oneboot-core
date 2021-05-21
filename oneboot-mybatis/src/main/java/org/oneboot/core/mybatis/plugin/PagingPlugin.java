@@ -13,7 +13,7 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- */
+ 
 package org.oneboot.core.mybatis.plugin;
 
 import java.sql.Connection;
@@ -51,32 +51,32 @@ import org.oneboot.core.mybatis.model.BaseTotalSearcher;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
+*//**
  * 将拦截Executor.prepare()方法实现分页方言的插入.
  *
  * @author shiqiao.pro
  * 
- */
+ *//*
 @Intercepts({
         @Signature(type = StatementHandler.class, method = "prepare", args = { Connection.class, Integer.class }) })
 public class PagingPlugin implements Interceptor {
     private static Logger logger = LoggerFactory.getLogger(PagingPlugin.class);
 
-    /** 数据库方言 **/
+    *//** 数据库方言 **//*
     private String dialect = "";
-    /** mapper.xml中需要拦截的ID(正则匹配) **/
+    *//** mapper.xml中需要拦截的ID(正则匹配) **//*
     private String pageSqlId = "";
 
-    /** 处理SQL **/
+    *//** 处理SQL **//*
     protected CountSqlParser countSqlParser = new CountSqlParser();
 
-    /**
+    *//**
      * 将sql转换为总记录数SQL
      * 
      * @param sql
      *            SQL语句
      * @return 总记录数的sql
-     */
+     *//*
     public String getCountString(String sql) {
         try {
             return countSqlParser.getSmartCountSql(sql);
@@ -142,7 +142,7 @@ public class PagingPlugin implements Interceptor {
         return ivk.proceed();
     }
 
-    /**
+    *//**
      * 对SQL参数(?)设值,参考org.apache.ibatis.executor.parameter.DefaultParameterHandler
      * 
      * @param ps
@@ -150,7 +150,7 @@ public class PagingPlugin implements Interceptor {
      * @param boundSql
      * @param parameterObject
      * @throws java.sql.SQLException
-     */
+     *//*
     @SuppressWarnings({ "rawtypes", "unchecked" })
     private void setParameters(PreparedStatement ps, MappedStatement mappedStatement, BoundSql boundSql,
             Object parameterObject) throws SQLException {
@@ -193,13 +193,13 @@ public class PagingPlugin implements Interceptor {
         }
     }
 
-    /**
+    *//**
      * 根据数据库方言，生成特定的分页sql，不含有记录总条数结果。 适用于海量数据的查询。
      * 
      * @param sql
      * @param page
      * @return
-     */
+     *//*
     private String genPageWithoutTotalResultSql(String sql, BaseSearcher page) {
         if (page != null && StringUtils.isNotBlank(dialect) && !"null".equals(dialect)) {
             StringBuffer pageSql = new StringBuffer();
@@ -213,13 +213,13 @@ public class PagingPlugin implements Interceptor {
         }
     }
 
-    /**
+    *//**
      * 根据数据库方言，生成特定的分页sql,含有记录总条数的返回，适用于数据量不多的查询
      *
      * @param sql
      * @param page
      * @return
-     */
+     *//*
     private String genPageWithTotalResultSql(String sql, BaseTotalSearcher page) {
         if (page != null && StringUtils.isNotBlank(dialect) && !"null".equals(dialect)) {
             StringBuffer pageSql = new StringBuffer();
@@ -275,3 +275,4 @@ public class PagingPlugin implements Interceptor {
     }
 
 }
+*/

@@ -68,7 +68,7 @@ public class CacheManagerRegistryImpl implements CacheManagerRegistry, Initializ
             try {
                 entry.getValue().dump();
             } catch (Exception e) {
-                LoggerUtil.error(e, "缓存打印出现异常,cacheName={0}", entry.getKey());
+                LoggerUtil.error(e, "缓存打印出现异常,cacheName={}", entry.getKey());
 
                 // 缓存打印不是很高级别的事件，打印出现异常可以忽略的，至少不要影响服务器启动
                 continue;
@@ -82,7 +82,7 @@ public class CacheManagerRegistryImpl implements CacheManagerRegistry, Initializ
     public boolean refreshCache(ICacheName cacheName) {
         CacheManager cacheManager = manager.get(cacheName);
         if (cacheManager == null) {
-            LoggerUtil.warn(logger, "没有注册缓存管理器，cacheName={0}", cacheName);
+            LoggerUtil.warn(logger, "没有注册缓存管理器，cacheName={}", cacheName);
             return false;
         }
 
@@ -101,7 +101,7 @@ public class CacheManagerRegistryImpl implements CacheManagerRegistry, Initializ
     public boolean refreshCache(ICacheName cacheName, String channelSystemId) {
         CacheManager cacheManager = manager.get(cacheName);
         if (cacheManager == null) {
-            LoggerUtil.warn(logger, "没有注册缓存管理器，cacheName={0}", cacheName);
+            LoggerUtil.warn(logger, "没有注册缓存管理器，cacheName={}", cacheName);
             return false;
         }
 
@@ -116,7 +116,7 @@ public class CacheManagerRegistryImpl implements CacheManagerRegistry, Initializ
     public void dumpCache(ICacheName cacheName) {
         CacheManager cacheManager = manager.get(cacheName);
         if (cacheManager == null) {
-            LoggerUtil.warn(logger, "没有注册缓存管理器，cacheName={0}", cacheName);
+            LoggerUtil.warn(logger, "没有注册缓存管理器，cacheName={}", cacheName);
             return;
         }
 
@@ -134,7 +134,7 @@ public class CacheManagerRegistryImpl implements CacheManagerRegistry, Initializ
             try {
                 entry.getValue().dump(channelSystem);
             } catch (Exception e) {
-                LoggerUtil.error(e, "缓存打印出现异常,cacheName={0}", entry.getKey());
+                LoggerUtil.error(e, "缓存打印出现异常,cacheName={}", entry.getKey());
 
                 // 缓存打印不是很高级别的事件，打印出现异常可以忽略的，至少不要影响服务器启动
                 continue;

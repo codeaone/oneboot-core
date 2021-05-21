@@ -44,7 +44,7 @@
 		<dependency>
 			<groupId>com.baomidou</groupId>
 			<artifactId>mybatis-plus-boot-starter</artifactId>
-			<version>3.4.2</version>
+			<version>3.4.3</version>
 		</dependency>
 		<dependency>
 			<groupId>mysql</groupId>
@@ -55,11 +55,11 @@
 			<artifactId>druid</artifactId>
 			<version>1.2.3</version>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>com.github.jsqlparser</groupId>
 			<artifactId>jsqlparser</artifactId>
 			<version>1.1</version>
-		</dependency>
+		</dependency> -->
 
 		<dependency>
 			<groupId>junit</groupId>

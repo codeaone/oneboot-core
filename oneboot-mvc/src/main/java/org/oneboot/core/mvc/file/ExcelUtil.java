@@ -206,7 +206,7 @@ public class ExcelUtil {
                                         value = new SimpleDateFormat(pattern).parse(strDate.toString());
                                     } catch (ParseException e) {
 
-                                        errMsg = MessageFormat.format("the cell [{0}] can not be converted to a date ",
+                                        errMsg = MessageFormat.format("the cell [{}] can not be converted to a date ",
                                                 CellReference.convertNumToColString(cell.getColumnIndex()));
                                     }
                                 } else {
@@ -234,9 +234,9 @@ public class ExcelUtil {
             }
             logs.setLogList(logList);
         } catch (InstantiationException e) {
-            throw new RuntimeException(MessageFormat.format("can not instance class:{0}", clazz.getSimpleName()), e);
+            throw new RuntimeException(MessageFormat.format("can not instance class:{}", clazz.getSimpleName()), e);
         } catch (IllegalAccessException e) {
-            throw new RuntimeException(MessageFormat.format("can not instance class:{0}", clazz.getSimpleName()), e);
+            throw new RuntimeException(MessageFormat.format("can not instance class:{}", clazz.getSimpleName()), e);
         }
         return list;
     }
@@ -350,14 +350,14 @@ public class ExcelUtil {
         String result = null;
         CellType[] cellTypeArr = validateMap.get(field.getType());
         if (cellTypeArr == null) {
-            result = MessageFormat.format("Unsupported type [{0}]", field.getType().getSimpleName());
+            result = MessageFormat.format("Unsupported type [{}]", field.getType().getSimpleName());
             return result;
         }
         ExcelCell annoCell = field.getAnnotation(ExcelCell.class);
         if (cell == null
                 || (cell.getCellTypeEnum() == CellType.STRING && StringUtils.isBlank(cell.getStringCellValue()))) {
             if (annoCell != null && annoCell.valid().allowNull() == false) {
-                result = MessageFormat.format("the cell [{0}] can not null", columnName);
+                result = MessageFormat.format("the cell [{}] can not null", columnName);
             }
             ;
         } else if (cell.getCellTypeEnum() == CellType.BLANK && annoCell.valid().allowNull()) {
@@ -376,7 +376,7 @@ public class ExcelUtil {
                         strType.append(",");
                     }
                 }
-                result = MessageFormat.format("the cell [{0}] type must [{1}]", columnName, strType.toString());
+                result = MessageFormat.format("the cell [{}] type must [{}]", columnName, strType.toString());
             } else {
                 // 类型符合验证,但值不在要求范围内的
                 // String in
@@ -390,7 +390,7 @@ public class ExcelUtil {
                         }
                     }
                     if (!isIn) {
-                        result = MessageFormat.format("the cell [{0}] value must in {1}", columnName, in);
+                        result = MessageFormat.format("the cell [{}] value must in {}", columnName, in);
                     }
                 }
                 // 数字型
@@ -399,28 +399,28 @@ public class ExcelUtil {
                     // 小于
                     if (!Double.isNaN(annoCell.valid().lt())) {
                         if (!(cellValue < annoCell.valid().lt())) {
-                            result = MessageFormat.format("the cell [{0}] value must less than [{1}]", columnName,
+                            result = MessageFormat.format("the cell [{}] value must less than [{}]", columnName,
                                     annoCell.valid().lt());
                         }
                     }
                     // 大于
                     if (!Double.isNaN(annoCell.valid().gt())) {
                         if (!(cellValue > annoCell.valid().gt())) {
-                            result = MessageFormat.format("the cell [{0}] value must greater than [{1}]", columnName,
+                            result = MessageFormat.format("the cell [{}] value must greater than [{}]", columnName,
                                     annoCell.valid().gt());
                         }
                     }
                     // 小于等于
                     if (!Double.isNaN(annoCell.valid().le())) {
                         if (!(cellValue <= annoCell.valid().le())) {
-                            result = MessageFormat.format("the cell [{0}] value must less than or equal [{1}]",
+                            result = MessageFormat.format("the cell [{}] value must less than or equal [{}]",
                                     columnName, annoCell.valid().le());
                         }
                     }
                     // 大于等于
                     if (!Double.isNaN(annoCell.valid().ge())) {
                         if (!(cellValue >= annoCell.valid().ge())) {
-                            result = MessageFormat.format("the cell [{0}] value must greater than or equal [{1}]",
+                            result = MessageFormat.format("the cell [{}] value must greater than or equal [{}]",
                                     columnName, annoCell.valid().ge());
                         }
                     }

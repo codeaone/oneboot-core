@@ -65,8 +65,8 @@ public abstract class BaseServiceRepositoryImpl {
         /*
          * try { EventContext context = EventContextUtil.getEventContextFromTracer(); tntInstId =
          * context.getTntInstId(); if (StringUtils.isBlank(tntInstId)) { tntInstId = TNTInstIDEnum.SMARTPAY.getCode();
-         * LoggerUtil.error(LOGGER, "租户信息从上下文中获取为空，设置默认值：${0}", tntInstId); } } catch (Exception e) {
-         * LoggerUtil.error(e, LOGGER, "租户信息从上下文中获取失败，设置默认值：${0}", tntInstId); }
+         * LoggerUtil.error(LOGGER, "租户信息从上下文中获取为空，设置默认值：${}", tntInstId); } } catch (Exception e) {
+         * LoggerUtil.error(e, LOGGER, "租户信息从上下文中获取失败，设置默认值：${}", tntInstId); }
          */
         return tntInstId;
     }

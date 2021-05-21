@@ -51,7 +51,7 @@ public class IdentityCardUtils {
 	public final static String NINETEEN = "19";
 
 	/** 身份证号模式 */
-	public static final String ID_CARD_NUMBER_REG = "^((([0-9]){15})|(([0-9]){17}[0-9Xx]{1}))$";
+	public static final String ID_CARD_NUMBER_REG = "^((([0-9]){15})|(([0-9]){17}[0-9Xx]{}))$";
 
 	/** 18位身份证最后的附加位 */
 	public final static String OVERHEAD_BIT = "X";

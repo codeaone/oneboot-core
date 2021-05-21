@@ -258,7 +258,7 @@ public abstract class BaseRepositoryImpl<M extends BaseModel, D> extends Abstrac
 
 		// 得到总页数据，然后for查询
 		// 分页查询数据
-		LoggerUtil.info("查询总数：{0}", result.getTotal());
+		LoggerUtil.info("查询总数：{}", result.getTotal());
 
 		list.addAll(result.getRecords());
 		long totalPageSize = result.getPages();

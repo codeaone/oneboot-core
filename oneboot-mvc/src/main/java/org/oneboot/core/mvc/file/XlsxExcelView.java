@@ -57,7 +57,7 @@ public class XlsxExcelView extends AbstractXlsxView {
 		ExcelObject eo = (ExcelObject) model.get("ExcelObject");
 
 		long t = System.currentTimeMillis();
-		LoggerUtil.info("start export excel file {0}, size:{1}", eo.getFilename(), eo.getDatas().size());
+		LoggerUtil.info("start export excel file {}, size:{}", eo.getFilename(), eo.getDatas().size());
 		String filename = new String(eo.getFilename().getBytes("gbk"), "iso-8859-1");
 
 		response.setHeader("Content-Disposition", "attachment; filename=\"" + filename + ".xlsx\"");
@@ -83,9 +83,9 @@ public class XlsxExcelView extends AbstractXlsxView {
 				setDataCellValue(dataRow, titles, data);
 			}
 		} catch (Exception e) {
-			LoggerUtil.error(e, "文件导出异常 {0}", filename);
+			LoggerUtil.error(e, "文件导出异常 {}", filename);
 		}
-		LoggerUtil.info("export excel file {0} 耗时：{1}ms", eo.getFilename(), System.currentTimeMillis() - t);
+		LoggerUtil.info("export excel file {} 耗时：{}ms", eo.getFilename(), System.currentTimeMillis() - t);
 	}
 
 	@SuppressWarnings({ "rawtypes", "unchecked" })
@@ -127,7 +127,7 @@ public class XlsxExcelView extends AbstractXlsxView {
 		File fileParent = file.getParentFile();
 		if (!fileParent.exists()) {
 			fileParent.mkdirs();
-			LoggerUtil.info("文件夹创建成功{0}", fileParent.getPath());
+			LoggerUtil.info("文件夹创建成功{}", fileParent.getPath());
 		}
 		try {
 			file.createNewFile();
@@ -141,7 +141,7 @@ public class XlsxExcelView extends AbstractXlsxView {
 			workbook.write(fileOutputStream);
 			fileOutputStream.close();
 		} catch (Exception e) {
-			LoggerUtil.error(e, "写入文件失败{0}", filePath);
+			LoggerUtil.error(e, "写入文件失败{}", filePath);
 		}
 
 		return filePath;
@@ -150,11 +150,11 @@ public class XlsxExcelView extends AbstractXlsxView {
 	@SuppressWarnings("rawtypes")
 	public String saveExcelToDisk(ExcelObject eo, String path, String fileName) {
 		long t = System.currentTimeMillis();
-		LoggerUtil.info("start saveExcelToDisk {0},{1},{2}", eo.getDatas().size(), path, fileName);
+		LoggerUtil.info("start saveExcelToDisk {},{},{}", eo.getDatas().size(), path, fileName);
 		SXSSFWorkbook workbook = new SXSSFWorkbook(1000);// 内存中保留 1000
 		setSheetData(workbook, "内容", eo);
 		String file = saveWorkbookToDisk(workbook, path, fileName);
-		LoggerUtil.info("生成文件完成：{0}, 耗时：{1}ms", file, System.currentTimeMillis() - t);
+		LoggerUtil.info("生成文件完成：{}, 耗时：{}ms", file, System.currentTimeMillis() - t);
 		return file;
 	}
 

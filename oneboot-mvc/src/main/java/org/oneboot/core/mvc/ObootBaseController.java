@@ -88,10 +88,10 @@ public class ObootBaseController {
 			// 这里需要看是系统异常还是业务异常
 			String errorLevel = errorCode.getErrorLevel();
 			if (StringUtils.equals(ErrorLevel.ERROR, errorLevel)) {
-				LoggerUtil.error(e, "操作失败:{0}", e.getMessage());
+				LoggerUtil.error(e, "操作失败:{}", e.getMessage());
 			} else {
 				// 不输出堆栈信息
-				LoggerUtil.error("操作失败:{0}", e.getMessage());
+				LoggerUtil.error("操作失败:{}", e.getMessage());
 			}
 		} else if (ex instanceof ConstraintViolationException) {
 			ConstraintViolationException cve = (ConstraintViolationException) ex;
@@ -101,13 +101,13 @@ public class ObootBaseController {
 			result.setErrors(cve.getLocalizedMessage());
 			event.setErrorCode(CommonErrorCode.ILLEGAL_PARAMETERS);
 
-			LoggerUtil.warn("操作失败:{0}", message);
+			LoggerUtil.warn("操作失败:{}", message);
 		} else if (ex instanceof BindException) {
 			BindException be = (BindException) ex;
 			result = resultIllegalFailed(be.getBindingResult());
 			event.setErrorCode(CommonErrorCode.ILLEGAL_PARAMETERS);
 
-			// LoggerUtil.warn("操作失败:{0}", message);
+			// LoggerUtil.warn("操作失败:{}", message);
 
 		} else if (ex instanceof MissingServletRequestParameterException) {
 			MissingServletRequestParameterException pe = (MissingServletRequestParameterException) ex;
@@ -117,7 +117,7 @@ public class ObootBaseController {
 			result.setErrors(message);
 			event.setErrorCode(CommonErrorCode.ILLEGAL_PARAMETERS);
 
-			LoggerUtil.warn("操作失败:{0}", message);
+			LoggerUtil.warn("操作失败:{}", message);
 		} else if (ex instanceof Throwable) {
 			buildFailUnknownResult(result);
 			event.setErrorCode(CommonErrorCode.SYSTEM_ERROR);
@@ -141,7 +141,7 @@ public class ObootBaseController {
 		for (FieldError error : allError) {
 			errors.put(error.getField(), error.getDefaultMessage());
 		}
-		LoggerUtil.warn("请求参数错误!error={0}", errors);
+		LoggerUtil.warn("请求参数错误!error={}", errors);
 
 		CommonMvcResult<Object> result = getFailed();
 		result.setMessage(CommonErrorCode.ILLEGAL_PARAMETERS.getView());
@@ -157,7 +157,7 @@ public class ObootBaseController {
 		for (FieldError error : allError) {
 			errors.put(error.getField(), error.getDefaultMessage());
 		}
-		LoggerUtil.warn("请求参数错误!error={0}", errors);
+		LoggerUtil.warn("请求参数错误!error={}", errors);
 
 		Map<String, Object> map = new HashMap<>(16);
 		map.put("success", false);
@@ -215,7 +215,7 @@ public class ObootBaseController {
 		try {
 			FieldExtMapUtil.outExtMap(source);
 		} catch (Exception e) {
-			LoggerUtil.error(e, "outExtMap 出错啦{0}", source);
+			LoggerUtil.error(e, "outExtMap 出错啦{}", source);
 		}
 	}
 
@@ -223,7 +223,7 @@ public class ObootBaseController {
 		try {
 			FieldExtMapUtil.readExtMap(source);
 		} catch (Exception e) {
-			LoggerUtil.error(e, "readExtMap 出错啦{0}", source);
+			LoggerUtil.error(e, "readExtMap 出错啦{}", source);
 		}
 	}
 

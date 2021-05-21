@@ -91,7 +91,7 @@ public class InstantiationTracingBeanPostProcessor implements ApplicationListene
 
             oneWatch.split();
 
-            LoggerUtil.info("bean={0} 初始化完成，耗时：{1}ms", descriptor.getClass().getSimpleName(), oneWatch.getSplitTime());
+            LoggerUtil.info("bean={} 初始化完成，耗时：{}ms", descriptor.getClass().getSimpleName(), oneWatch.getSplitTime());
         }
     }
 

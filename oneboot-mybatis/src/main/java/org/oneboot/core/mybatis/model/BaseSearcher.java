@@ -110,7 +110,7 @@ public class BaseSearcher extends ToString {
 				this.setSortField(sf);
 				this.setSortOrder(ServiceContextHolder.getSortOrder());
 			} else {
-				LoggerUtil.warn("SortField={0} 字段未配置，该字段不生效。请到SearchContext中配置好", sortField);
+				LoggerUtil.warn("SortField={} 字段未配置，该字段不生效。请到SearchContext中配置好", sortField);
 				this.setSortField(null);
 				this.setSortOrder(null);
 			}
